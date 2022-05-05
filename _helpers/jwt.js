@@ -18,9 +18,11 @@ function jwt() {
             '/locationChange',
             '/guests',
             '/yourParties',
-            'invitedParties',
+            '/invitedParties',
             '/planNewParty',
-            '/singleParty'
+            '/singleParty',
+            '/partys/register',
+            '/show'
         ]
     });
 }

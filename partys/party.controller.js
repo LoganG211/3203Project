@@ -14,9 +14,9 @@ module.exports = router;
 
 //Fix
 function register(req, res, next) {
-    userService.create(req.body)
-        .then(() => res.json({}))
-        .catch(err => next(err));
+    partyService.create(req.body)
+        .then(res.redirect('/yourParties'))
+        //.catch(err => next(err));
 }
 
 function getAll(req, res, next) {
@@ -38,7 +38,7 @@ function update(req, res, next) {
 }
 
 function _delete(req, res, next) {
-    userService.delete(req.params.id)
+    partyService.delete(req.params.id)
         .then(() => res.json({}))
         .catch(err => next(err));
 }
